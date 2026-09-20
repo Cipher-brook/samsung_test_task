@@ -5,12 +5,11 @@ It was done in 2024.
 This is the source release of the Samsung test task, version 1.0.0.
 Supported Target CPU Architecture x86_64. Tested on linux kernel versions 6.8.0 x86_64.
 
-How to build
-To build:
-    ~/package_directory$ make
+Build:
+    `~/package_directory$ make`
 
-To run:
-    ~/package_directory$ sudo test_app/test_app
+Run:
+    `~/package_directory$ sudo test_app/test_app`
 
 Directory Structure Layout
     ksrc/     kernel module files;
@@ -79,42 +78,7 @@ The test application runs the following steps to check kernel module:
 
 Build files.
 
-How to build and run kernel module and test application describes in the HOWTO.txt.
 When you built files, path to built files will be:
 
     kernel module:    /package_directory/ksrc/stt_cdev.ko
     test application: /package_directory/test_app/test_app
-
-All commands below should be executed from root directory of package.
-
-HOW TO:
-
-Build kernel module and test application:
-    make
-
-Clean kernel module and test application build files:
-    make clean
-
-Build kernel module:
-    make ksrc
-
-Clean kernel module build files:
-    make clean_ksrc
-
-Build test application:
-    make test_app
-
-Clean test application build files:
-    make clean_test_app
-
-Install kernel module:
-    sudo make install_kmod
-
-Uninstall kernel module:
-    sudo make uninstall_kmod
-
-Run test application:
-    sudo test_app/test_app
-
-Build kernel module and test application, run test application:
-    make clean && make && sudo test_app/test_app
